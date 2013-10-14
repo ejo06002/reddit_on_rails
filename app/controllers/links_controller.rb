@@ -1,11 +1,12 @@
 class LinksController < ApplicationController
-
+before_filter :authenticate_user!
 	def index
 		@link = Link.all
 	end
 
 	def show
 		@link = Link.find(params[:id])
+		@comment = Comment.new
 	end
 
 	def new
