@@ -1,8 +1,19 @@
-Index page
+Index page<br>
 
 
-<ol>
+<table border=1px>
+	<tr>
+		<td><b> Link Title </b></td>
+		<td> <b> Link URL </b> </td>
+		<td> <b> Submitter </b> </td>
+	</tr>
 	<% @link.each do |link| %>
-		<li><%= link.title %>, <%= link.url %></li>
-	<% end %>
-</ol>
+	<tr>
+		<td><%= link.title %></td>
+		<td><%= link.url %></td>
+		
+	</tr>
+	<% end %>	
+<table>
+
+	<%= link_to "submit another link", new_link_path %>

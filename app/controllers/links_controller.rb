@@ -15,7 +15,7 @@ class LinksController < ApplicationController
 	def create
 		@link = Link.new(params[:link])
 		if @link.save
-			redirect_to '/links'
+			redirect_to '/'
 		else
 			render 'new'
 			flash[:notice] = "Didn't work"

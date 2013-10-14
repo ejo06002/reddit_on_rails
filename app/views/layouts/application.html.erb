@@ -10,11 +10,12 @@
 
 <% if current_user.present? %>
 	<%= link_to "Sign_out", destroy_user_session_path, :method => :delete %>
+	<p> User logged in as: <%= current_user.email %></p>
 <% else %>
+	<p><em> No user currently logged in </em></p>
 	<%= link_to "Log In", new_user_session_path %>
 	<%= link_to "Sign up", new_user_registration_path %>
 <% end %>
-
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
