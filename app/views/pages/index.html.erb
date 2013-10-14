@@ -6,12 +6,13 @@
 	<tr>
 		<td><b> Link Title </b></td>
 		<td> <b> Link URL </b> </td>
-		<td> <b> Submitter </b> </td>
+		<td> <b> Comments </b> </td>
 	</tr>
 	<% @link.each do |link| %>
 	<tr>
 		<td><a href="<%= link.url %>"><%= link.title %></a></td>
 		<td><%= link.url %></td>
+		<td><%= link_to "comments", link %></td>
 		
 	</tr>
 	<% end %>	
